@@ -1,13 +1,20 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import  {PlateProvider } from "./context/plates";
 import App from './App';
+import './index.css';
+import { CartProvider } from './context/cart';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <PlateProvider>
+    <CartProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </CartProvider>
+  </PlateProvider>,
   document.getElementById('root')
 );
 

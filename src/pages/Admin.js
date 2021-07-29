@@ -58,7 +58,7 @@ const Admin = () => {
             <AmplifyAuthenticator>
                 <section>
                     <header className="form-header">
-                        <h3>Add New Book</h3>
+                        <h3>Add New Plate</h3>
                         <AmplifySignOut></AmplifySignOut>
                     </header>
                     <form className="form-wrapper" onSubmit={handleSubmit}>
@@ -71,12 +71,12 @@ const Admin = () => {
                         </div>
                         <div className="form-fields">
                             <div className="title-form">
-                                <p><label htmlFor="title">Title</label></p>
+                                <p><label htmlFor="title">Name</label></p>
                                 <p><input
                                     name="email"
                                     type="title"
                                     placeholder="Type the title"
-                                    onChange={(e) =>setPlateDetails({ ...plateDetails, title: e.target.value })}
+                                    onChange={(e) =>setPlateDetails({ ...plateDetails, name: e.target.value })}
                                     required
                                 /></p>
                             </div>
@@ -92,12 +92,12 @@ const Admin = () => {
                                 /></p>
                             </div>
                             <div className="author-form">
-                                <p><label htmlFor="author">Author</label></p>
+                                <p><label htmlFor="author">Category</label></p>
                                 <p><input
                                     name="author"
                                     type="text"
                                     placeholder="Type the author's name"
-                                    onChange={(e) => setPlateDetails({ ...plateDetails, author: e.target.value })}
+                                    onChange={(e) => setPlateDetails({ ...plateDetails, category: e.target.value })}
                                     required
                                 /></p>
                             </div>
@@ -106,7 +106,7 @@ const Admin = () => {
                                     <input
                                         name="price"
                                         type="text"
-                                        placeholder="What is the Price of the book (USD)"
+                                        placeholder="What is the Price of the plates (USD)"
                                         onChange={(e) => setPlateDetails({ ...plateDetails, price: e.target.value })}
                                         required
                                     /></p>
