@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "appchin",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authappchin6183bf8a",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
