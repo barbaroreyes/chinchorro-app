@@ -5,13 +5,17 @@ import  {PlateProvider } from "./context/plates";
 import App from './App';
 import './index.css';
 import { CartProvider } from './context/cart';
+import {BrowserRouter as Router} from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <PlateProvider>
     <CartProvider>
       <React.StrictMode>
+        <Router>
         <App />
+        </Router>
+       
       </React.StrictMode>
     </CartProvider>
   </PlateProvider>,
