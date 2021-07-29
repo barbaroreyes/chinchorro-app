@@ -4,6 +4,11 @@ import { API, graphqlOperation, Storage } from "aws-amplify";
 import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import {createPlate } from '../graphql/mutations'
 import config from '../aws-exports'
+import Amplify from 'aws-amplify';
+
+Amplify.configure(config)
+
+
 
 const {
     aws_user_files_s3_bucket_region: region,
